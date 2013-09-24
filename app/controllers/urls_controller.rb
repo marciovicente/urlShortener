@@ -2,24 +2,12 @@ class UrlsController < ApplicationController
   # GET /urls
   # GET /urls.json
   def index
-    #@urls = Url.all
     @url = Url.new
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @urls }
     end
   end
-
-  # GET /urls/1
-  # GET /urls/1.json
-  #def show
-  #   @url = Url.find(params[:id])
-
-  #   respond_to do |format|
-  #     format.html # show.html.erb
-  #     format.json { render json: @url }
-  #   end
-  # end
 
   # GET /urls/new
   # GET /urls/new.json
@@ -32,13 +20,6 @@ class UrlsController < ApplicationController
     end
   end
 
-  # GET /urls/1/edit
-  # def edit
-  #   @url = Url.find(params[:id])
-  # end
-
-  # POST /urls
-  # POST /urls.json
   def create
     @url = Url.new(params[:url])
 
